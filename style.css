@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --white: #F9F9F9;
+  --whitesmoke: #ECECEC;
+  --light-grey: #C4C4C4;
+  --medium-grey: #A7A7A7;
+  --deep-grey: #343434;
+  --black: #000000;
+  --blue: #1B77F3;
+  --red: #CF3C3F;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Lexend Deca', sans-serif;
+}
+
+.login-wrapper {
+  display: flex;
+}
+
+.box-login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 500px;
+  min-height: 100vh;
+  padding: clamp(35px, 8%, 70px);
+  justify-content: space-between;
+}
+
+.wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo {
+  width: 130px;
+  margin-bottom: 80px;
+}
+
+.login-title {
+  color: var(--deep-grey);
+  font-size: 1.5em;
+  margin-bottom: 30px;
+}
+
+.login-label {
+  width: 100%;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.login-label span{
+  position: absolute;
+  font-size: 0.8em;
+  font-weight: 700;
+  color: var(--medium-grey);
+  margin: 20px;
+  cursor: text;
+  transition: all 200ms ease;
+}
+
+.input-login {
+  display: block;
+  width: 100%;
+  padding: 25px 10px 10px;
+  border: none;
+  background-color: var(--whitesmoke);
+  border-radius: 5px;
+  outline: none;
+  font-size: 0.9em;
+  border: 2px solid rgba(0, 0, 0, 0);
+  font-weight: 600;
+  color: var(--deep-grey);
+}
+
+.input-login:focus {
+  background-color: var(--white);
+  border: 2px solid var(--deep-grey);
+}
+
+.login-label .span-active {
+  font-size: 0.7em;
+  margin: 8px 10px;
+}
+
+.redes-icons {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.redes-icons img {
+  width: 20px;
+}
+
+.redes-icons div {
+  width: 33.33%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 35px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.redes-icons div:nth-child(1) {
+  background-color: var(--blue);
+}
+
+.redes-icons div:nth-child(2) {
+  border: 1px solid var(--whitesmoke);
+}
+
+
+.redes-icons div:nth-child(3) {
+  background-color: var(--black);
+}
+
+
+.checkbox-label {
+  width: 100%;
+  margin-top: 15px;
+  margin-bottom: 50px;
+  font-size: 0.9em;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+}
+
+.checkbox {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background-color: var(--whitesmoke);
+  margin-right: 8px;
+  border-radius: 3px;
+}
+
+.checkbox:checked {
+  background-color: var(--red);
+}
+
+.checkbox:checked::after {
+  content: "";
+  display: flex;
+  margin: 2px 6px;
+  width: 5px;
+  height: 10px;
+  border: 0 solid white;
+  border-width: 0 3px 3px 0;
+  display: block;
+  transform: rotate(45deg);
+}
+
+.btn-login {
+  width: 60px;
+  height: 60px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--red);
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 60px;
+}
+
+.btn-login svg {
+  fill: white;
+}
+
+.btn-login:disabled {
+  cursor: auto;
+  background-color: white;
+  border: 2px solid var(--whitesmoke);
+}
+
+.btn-login:disabled svg{
+  fill: var(--light-grey);
+}
+
+.span-footer {
+  font-size: 0.8em;
+  font-weight: 700;
+  display: block;
+  margin-bottom: 5px;
+  color: var(--medium-grey);
+}
+
+.wallpaper-section {
+  width: 100%;
+  background-image: url('./images/wallpaper.jpg');
+  background-size: cover;
+  background-position: center;
+  flex: 1;
+}
