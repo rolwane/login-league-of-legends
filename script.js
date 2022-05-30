@@ -1,13 +1,15 @@
-const inputs = document.querySelectorAll('.input-login');
-const button = document.querySelector('.btn-login');
+const inputs = document.querySelectorAll('.input');
+const button = document.querySelector('.login__button');
 
 const handleFocus = ({ target }) => {
-  target.previousElementSibling.classList.add('span-active');
+  const span = target.previousElementSibling;
+  span.classList.add('span-active');
 }
 
-const handleFocusout = ({ target }) => {
+const handleFocusOut = ({ target }) => {
   if (target.value === '') {
-    target.previousElementSibling.classList.remove('span-active');
+    const span = target.previousElementSibling;
+    span.classList.remove('span-active');
   }
 }
 
@@ -17,10 +19,10 @@ const handleChange = () => {
   if (username.value && password.value.length >= 8) {
     button.removeAttribute('disabled');
   } else {
-    button.setAttribute('disabled', true);
+    button.setAttribute('disabled', '');
   }
 }
 
 inputs.forEach((input) => input.addEventListener('focus', handleFocus));
-inputs.forEach((input) => input.addEventListener('focusout', handleFocusout));
+inputs.forEach((input) => input.addEventListener('focusout', handleFocusOut));
 inputs.forEach((input) => input.addEventListener('input', handleChange));
